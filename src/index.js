@@ -1,33 +1,32 @@
 
 exports.min = function min (array) {
-  let minArr = array [0];
-
-for (let i = 0; i < array.length; i++) {
-  if (array [i]< minArr) {
-     minArr = array [i];
+  
+  if ((typeof array === 'undefined')  || array.length === 0) {
+    return 0;
   }
-} return minArr;
-};
+  return Math.min(...array);
+} 
+
 
 exports.max = function max (array) {
-  let maxArr = array [0];
-
-for (let i = 0; i < array.length; i++) {
-  if (array [i] >= maxArr) {
-     maxArr = array [i];
+ 
+  if ((typeof array === 'undefined')  || array.length === 0) {
+    return 0;
   }
-} return maxArr;
-};
+  return Math.max(...array);
+}
 
 exports.avg = function avg (array) {
+  if ((typeof array === 'undefined')  || array.length === 0) {
+    return 0;
+  }
+
   let sum = 0;
   let avgArr = array [0];
-
-for (let i = 0; i < array.length; i++) {
-  sum += parseInt( array[i]);
+ for (let i = 0; i < array.length; i++) {
+    sum += parseInt( array[i]);
   avgArr = sum/array.length;
  } return avgArr;
- }
- 
+} 
 
 
